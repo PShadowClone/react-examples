@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  app:
+     build:
+       context: ../
+       dockerfile: Dockerfile
+     container_name: react-test-app
+     restart: always
+     working_dir: /app
+     volumes:
+       - ../:/app
+     ports:
+       - "1000:1000"
